@@ -26,12 +26,17 @@ public class T5String7 {
         System.out.println("Anota una palabra o cadena de carácteres.");
         cadena=sc.nextLine();
         
+        cont = contCaracter(cadena, caracter, cont);
+        System.out.println("El carácter "+caracter+" aparece "+cont+ " vez/veces en la cadena");
+    }
+
+    public static int contCaracter(String cadena, String caracter, int cont) {
         for (int i=0;i<cadena.length();i++){
             if(cadena.charAt(i)==caracter.charAt(0)){
                 cont++;
             }
         }
-        System.out.println("El carácter "+caracter+" aparece "+cont+ " vez/veces en la cadena");
+        return cont;
     }
     
 }
